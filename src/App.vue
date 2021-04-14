@@ -40,6 +40,10 @@ import Resume from "@/components/Resume.vue";
 import About from "@/components/About.vue";
 import { posts } from "@/blogPosts";
 
+// [ ] add target="_blank" to all blog anchors
+
+// [ ] add google analytics (lol or make own with firebase...)
+
 // could show a graph of how many times someone clicks on the site lol, real time, firebase
 
 // user can control styles/colors...
@@ -62,6 +66,10 @@ import { posts } from "@/blogPosts";
 // This feels like a decent solution....see how it feels
 
 // really want more margin top over the first post....but then gapp beetweenn whe it's selected
+
+// wow we had freaking 20 posts?
+
+// let's get it going again!!
 
 @Component({
   components: { Resume, About },
@@ -102,7 +110,7 @@ body {
 }
 
 #main {
-  width: calc(100% - 250px - 2rem);
+  width: calc(100% - 250px);
   position: absolute;
   top: 0;
   left: 250px;

@@ -36,7 +36,6 @@ const router = new VueRouter({
     component: Resume
   },
   {
-
     name: "blog",
     path: "/blog",
     component: Blog,

@@ -19,21 +19,13 @@
 <script lang="ts">
 import { Component, Watch, Vue } from "vue-property-decorator";
 import { posts } from "@/blogPosts";
-// import Post1 from "@/components/Posts/Post1.vue";
-// import Post2 from "@/components/Posts/Post2.vue";
-// import Post3 from "@/components/Posts/Post3.vue";
 
 @Component({ components: {} })
 export default class Blog extends Vue {
   posts = posts;
 
-  @Watch("$route")
-  routeChanged() {
-    console.log("route change!");
-  }
-
   clickPost(p: any) {
-    console.log("click post", p, p.path.slice(1));
+    // console.log("click post", p, p.path.slice(1));
     this.$router.push({ name: p.path.slice(1) }).catch(() => {});
   }
 }
@@ -48,25 +40,26 @@ export default class Blog extends Vue {
 }
 
 .blogTitle {
-  margin-top: 52px;
+  /* margin-top: 52px; */
   font-family: Baskerville;
   font-size: 38px;
   color: midnightBlue;
 }
 
 code {
-  @apply pl-20 py-4 flex justify-start;
+  @apply mx-32 pl-20 py-4 flex justify-start;
   font-size: 16px;
   background-color: lightGray;
   line-height: 135%;
 
-  margin-left: 100px;
-  margin-right: 50px;
+  /* margin-left: 100px;
+  margin-right: 50px; */
 }
 
 .blogText {
-  margin-left: 100px;
-  margin-right: 50px;
+  @apply mx-28;
+  /* margin-left: 100px;
+  margin-right: 50px; */
   font-size: 21px;
   line-height: 160%;
   margin-top: 15px;
@@ -79,5 +72,9 @@ code {
   background-color: lightgray;
   font-size: 16.5px;
   padding: 4px;
+}
+
+a {
+  @apply text-blue-500 underline;
 }
 </style>

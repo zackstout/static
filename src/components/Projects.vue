@@ -9,8 +9,8 @@
       </div>
       <div class="mt-2">
         If you are interested in seeing some of the work I've done professionally, check out the following Screenfeed
-        products: <a href="https://www.screenfeed.com/content/weather-graphics">Weather Graphics</a> and
-        <a href="https://www.screenfeed.com/content/alerts">Weather Alerts</a>
+        products: <a href="https://www.screenfeed.com/content/weather-graphics" target="_blank">Weather Graphics</a> and
+        <a href="https://www.screenfeed.com/content/alerts" target="_blank">Weather Alerts</a>
       </div>
     </div>
 
@@ -41,7 +41,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { projects } from "@/projects";
+import { projects } from "@/projectsList";
 
 @Component
 export default class Projects extends Vue {
