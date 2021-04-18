@@ -9,7 +9,7 @@ export const projects = [
         description: "This is a project to visualize text from Shakespeare plays. My goal was to blah blah blah and then maybe this who knows."
     },
     {
-        title: "Project 2",
+        title: "Phyllotaxis",
         tags: ["SVG", "python", "html canvas"],
         repoUrl: "www.google.com",
         demoUrl: "www.google.com",
@@ -18,7 +18,7 @@ export const projects = [
         description: "This is a project. This is a project. This is a project. This is a project. This is a project. This is a project. This is a project. This is a project."
     },
     {
-        title: "Project 3",
+        title: "Hue-changing screensaver",
         tags: ["WebGL", "Vue", "React", "GSAP"],
         repoUrl: "www.google.com",
         demoUrl: "www.google.com",

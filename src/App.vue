@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="relative w-full h-full">
     <div id="sidebar" class="bg-gray-100">
       <div
         v-for="nav in sideNavs"
@@ -28,17 +28,26 @@
       </div>
     </div>
 
-    <div id="main">
+    <div id="main" :class="[themeLight ? 'bg-white text-gray-800' : 'bg-blue-800 text-white']">
       <router-view></router-view>
     </div>
+
+    <!-- <div class="absolute top-0 right-0">
+      <ToggleButton :selected="themeLight" @click="toggleTheme" />
+    </div> -->
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Resume from "@/components/Resume.vue";
-import About from "@/components/About.vue";
 import { posts } from "@/blogPosts";
+import ToggleButton from "@/components/ToggleButton.vue";
+
+// [x update favicon AND title
+
+// i like a light/dark theme toggle
+
+// some kind of...animation.....on About....
 
 // [ ] add target="_blank" to all blog anchors
 
@@ -72,7 +81,7 @@ import { posts } from "@/blogPosts";
 // let's get it going again!!
 
 @Component({
-  components: { Resume, About },
+  components: { ToggleButton },
 })
 export default class App extends Vue {
   posts = posts;
@@ -82,6 +91,13 @@ export default class App extends Vue {
     { label: "Projects", path: "projects" },
     { label: "Blog", path: "blog" },
   ];
+
+  themeLight = true;
+
+  toggleTheme() {
+    this.themeLight = !this.themeLight;
+    console.log("toggle", this.themeLight);
+  }
 }
 </script>
 
@@ -93,7 +109,7 @@ body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  /* color: #2c3e50; */
 }
 
 .about p {

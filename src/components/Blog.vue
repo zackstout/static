@@ -24,6 +24,10 @@ import { posts } from "@/blogPosts";
 export default class Blog extends Vue {
   posts = posts;
 
+  mounted() {
+    document.title = "Blog";
+  }
+
   clickPost(p: any) {
     // console.log("click post", p, p.path.slice(1));
     this.$router.push({ name: p.path.slice(1) }).catch(() => {});

@@ -47,6 +47,10 @@ import { projects } from "@/projectsList";
 export default class Projects extends Vue {
   projects = projects;
 
+  mounted() {
+    document.title = "Projects";
+  }
+
   getThumbnailStyle(proj: any) {
     return {
       backgroundImage: `url("${proj.previewImageUrl}")`,
