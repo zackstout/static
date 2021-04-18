@@ -1,0 +1,3 @@
+[submodule "bard"]
+	path = bard
+	url = https://github.com/zackstout/bard
