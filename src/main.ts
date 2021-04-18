@@ -30,6 +30,8 @@ const router = new VueRouter({
     path: "/about",
     component: About
   },
+  { path: "/bard" },
+
   {
     name: "resume",
     path: "/resume",
