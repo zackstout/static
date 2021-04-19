@@ -1,6 +1,6 @@
 <template>
   <div class="p-3">
-    <div class="text-3xl mb-3">Experience</div>
+    <div class="text-3xl mb-6">Experience</div>
 
     <div class="text-2xl my-3">Career History</div>
     <div class="flex mb-2">

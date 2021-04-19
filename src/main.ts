@@ -9,6 +9,8 @@ import Blog from "@/components/Blog.vue";
 import Post1 from "@/components/Posts/Post1.vue";
 import Post2 from "@/components/Posts/Post2.vue";
 import Post3 from "@/components/Posts/Post3.vue";
+// @ts-ignore
+// import Bard from "../dist/bard/index.html";
 
 const postComponents: any = {
   Post1, Post2, Post3
@@ -30,7 +32,7 @@ const router = new VueRouter({
     path: "/about",
     component: About
   },
-  { path: "/bard" },
+  // { path: "/bard", component: { template: Bard } },
 
   {
     name: "resume",
