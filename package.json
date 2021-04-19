@@ -7,8 +7,10 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@types/luxon": "^1.26.4",
     "autoprefixer": "^9.0.0",
     "html-loader": "^2.1.2",
+    "luxon": "^1.26.0",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "vue": "^2.6.11",

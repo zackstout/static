@@ -1,6 +1,8 @@
 # static-site
 
 To deploy:
+First must build, then commit.
+
 git push origin :gh-pages #to delete
 git subtree push --prefix dist origin gh-pages
 

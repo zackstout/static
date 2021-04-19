@@ -11,19 +11,16 @@
         {{ nav.label }}
       </div>
 
-      <div v-if="$route.path.includes('/blog')">
+      <div v-if="$route.path.includes('/blog')" class="mt-2">
         <div
           v-for="post in posts"
           :key="post.path"
           class="mb-2 cursor-pointer px-3 py-2 flex items-center leading-none"
-          :class="[$route.path.includes(post.path.slice(1)) ? 'bg-blue-400 text-white' : 'hover:opacity-50']"
+          :class="[$route.path.includes(post.path.slice(1)) ? 'font-bold' : 'hover:opacity-50']"
           @click="$router.push({ name: post.path.slice(1) }).catch(() => {})"
         >
-          <div
-            class="h-2 w-2 mr-3 ml-3 flex-shrink-0"
-            :class="[$route.path.includes(post.path.slice(1)) ? 'bg-white' : 'bg-blue-400']"
-          ></div>
-          <div>{{ post.title }}</div>
+          <div class="h-2 w-2 mr-3 ml-3 flex-shrink-0 bg-blue-400"></div>
+          <div v-html="getTitle(post.title)"></div>
         </div>
       </div>
     </div>
@@ -43,7 +40,14 @@ import { Component, Vue } from "vue-property-decorator";
 import { posts } from "@/blogPosts";
 import ToggleButton from "@/components/ToggleButton.vue";
 
-// [x update favicon AND title
+// replacing bg-blue-400 text-white with font-bold,
+// and removing :class="[$route.path.includes(post.path.slice(1)) ? 'bg-white' : 'bg-blue-400']"
+
+// [x] link to github (maybe linkedin), and email lol
+
+// [ ] add more projects (database one?? poems react?)
+
+// [x] update favicon AND title
 
 // i like a light/dark theme toggle
 
@@ -91,6 +95,13 @@ export default class App extends Vue {
     { label: "Projects", path: "projects" },
     { label: "Blog", path: "blog" },
   ];
+
+  getTitle(title: string) {
+    if (title.includes("Rilke")) {
+      return `<span>Rilke's</span> <span class='italic'>Archaic Torso of Apollo</span>`;
+    }
+    return title;
+  }
 
   themeLight = true;
 

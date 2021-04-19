@@ -1,6 +1,5 @@
 <template>
   <div class="p-3">
-    <!-- What are coonditios for rennder: -->
     <div v-if="$route.path === '/blog'">
       <div class="text-3xl mb-6">Blog</div>
 
@@ -19,13 +18,34 @@
 <script lang="ts">
 import { Component, Watch, Vue } from "vue-property-decorator";
 import { posts } from "@/blogPosts";
+// @ts-ignore
+import { DateTime } from "luxon";
+
+// TODO: Iframes for inner canvases/demos?
+
+// TODO: format fixes and images
+
+// TODO: maybe just  make sidebar posts BOLD, insteead of blue bg? then can set margin on  top of list
 
 @Component({ components: {} })
 export default class Blog extends Vue {
-  posts = posts;
+  posts = posts.sort((a: any, b: any) => {
+    const a1 = DateTime.fromJSDate(new Date(a.subtitle));
+    const b1 = DateTime.fromJSDate(new Date(b.subtitle));
+
+    return b1 - a1;
+  });
 
   mounted() {
     document.title = "Blog";
+
+    // console.log(
+    //   "posts",
+    //   posts,
+    //   posts.map((p: any) => {
+    //     return new Date(p.subtitle);
+    //   })
+    // );
   }
 
   clickPost(p: any) {
