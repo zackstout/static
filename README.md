@@ -1,7 +1,10 @@
 # static-site
 
 To deploy:
+git push origin :gh-pages #to delete
 git subtree push --prefix dist origin gh-pages
+
+But then you have to re-add custom domain to github pages for this repo, kind of annoying
 
 ## Project setup
 

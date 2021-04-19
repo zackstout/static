@@ -20,8 +20,9 @@
 
       <div class="flex justify-between">
         <div
-          class="flex-shrink-0 "
+          class="flex-shrink-0 cursor-pointer"
           style="width:700px; height:500px;"
+          @click="clickImg(proj)"
           :style="{
             'background-size': 'contain',
             'background-repeat': 'no-repeat',
@@ -70,7 +71,15 @@ export default class Projects extends Vue {
     };
   }
 
+  clickImg(proj: any) {
+    // for now, just go to demo?
+    // this.$router.push({ redirect: window.location.href = this.getDemoUrl(proj) });
+    // window.navigator.ur
+    window.location.href = this.getDemoUrl(proj);
+  }
+
   getDemoUrl(proj: any) {
+    if (proj.repo === "bard") return "https://www.webofthebard.com";
     return `https://zackstout.github.io/${proj.repo}`;
   }
 

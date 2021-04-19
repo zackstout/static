@@ -26,6 +26,11 @@ export const projects = [
     //     description: "This is a project too!"
     // },
     {
+        title: "Shakespeare Text Visualization",
+        repo: "bard",
+        description: "A visual explorer of the text of Shakespeare's plays. User can navigate between plays, scenes and characters, and view interactions between characters and number of lines per character."
+    },
+    {
         title: "Fourier Transformations",
         repo: "fourier-canvas",
         description: `Creating an animation of a crucial step in the Fourier transformation to deepen my mathematical understanding of it.
