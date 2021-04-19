@@ -2,6 +2,7 @@
 node_modules
 # /dist
 
+dist/img/Screen Shot*
 
 # local env files
 .env.local
