@@ -43,7 +43,7 @@
           </div>
 
           <div class="mt-4 flex">
-            <div class="mr-3 p-2 bg-blue-600 text-white text-xs rounded" v-for="tag in proj.tags" :key="tag">
+            <div class="mr-3 px-2 py-1 bg-blue-400 text-white text-xs rounded" v-for="tag in proj.tags" :key="tag">
               {{ tag }}
             </div>
           </div>

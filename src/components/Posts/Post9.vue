@@ -42,8 +42,8 @@
 
     <div class="flex flex-col items-center">
       <div class="mb-6">
-        <button class="bg-gray-500 p-2 text-white rounded mr-4" @click="start">Start</button>
-        <button class="bg-gray-500 p-2 text-white rounded" @click="stop">Pause</button>
+        <button class="bg-blue-400 p-2 text-white rounded mr-4" @click="start">Start</button>
+        <button class="bg-blue-400 p-2 text-white rounded" @click="stop">Pause</button>
       </div>
       <canvas id="cardioid" width="600" height="600"></canvas>
     </div>

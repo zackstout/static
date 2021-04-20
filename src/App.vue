@@ -40,6 +40,8 @@ import { Component, Vue } from "vue-property-decorator";
 import { posts } from "@/blogPosts";
 import ToggleButton from "@/components/ToggleButton.vue";
 
+// [ ] would be really nice to fix history/hash problem without hash....need catch all route that redirects to index....
+
 // replacing bg-blue-400 text-white with font-bold,
 // and removing :class="[$route.path.includes(post.path.slice(1)) ? 'bg-white' : 'bg-blue-400']"
 

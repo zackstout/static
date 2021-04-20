@@ -49,7 +49,7 @@
       ></div>
     </div>
 
-    <hr class="mt-8 mb-4" />
+    <hr class="mt-16 mb-2" />
 
     <div class="text-xs flex justify-around">
       <div class="flex items-center">
