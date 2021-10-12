@@ -52,10 +52,10 @@
     <hr class="mt-16 mb-2" />
 
     <div class="text-xs flex justify-around">
-      <div class="flex items-center">
+      <!-- <div class="flex items-center">
         <div class="h-3 w-3 mr-2"><img src="@/assets/gmailicon.png" /></div>
         <div>zackstout@gmail.com</div>
-      </div>
+      </div> -->
 
       <div class="flex items-center my-1 cursor-pointer hover:opacity-50">
         <div class="h-3 w-3 mr-2"><img src="@/assets/github_icon.svg" /></div>
