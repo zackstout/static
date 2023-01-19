@@ -145,6 +145,7 @@ body {
   left: 250px;
   padding: 1rem;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .side-nav {

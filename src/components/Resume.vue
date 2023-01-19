@@ -76,6 +76,6 @@ export default class Resume extends Vue {
 }
 
 .time-text {
-  @apply text-md opacity-50;
+  @apply opacity-50;
 }
 </style>

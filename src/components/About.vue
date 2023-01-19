@@ -1,29 +1,31 @@
 <template>
-  <div class="mb-8 p-3" style="">
-    <div class="text-3xl mb-6">About</div>
+  <div class="p-3 flex flex-col justify-between overflow-hidden" style="min-height: 95vh;">
+    <div>
+      <div class="text-3xl mb-6">About</div>
 
-    <div class="w-full flex justify-between">
-      <div>
-        <p class="p">
-          I am a web developer living in Minneapolis, Minnesota.
-        </p>
+      <div class="w-full flex justify-between text-lg space-x-8">
+        <div>
+          <p class="p">
+            I am a web developer living in Minneapolis, Minnesota.
+          </p>
 
-        <p class="p">
-          My passions include math, puzzles, Greek tragedy and games.
-        </p>
+          <p class="p">
+            My passions include math, puzzles, Greek tragedy and games.
+          </p>
 
-        <!-- <p class="p">I am trying to learn German — <span class="italic">ich versuche zu lernen!</span></p> -->
+          <!-- <p class="p">I am trying to learn German — <span class="italic">ich versuche zu lernen!</span></p> -->
 
-        <p class="p">
-          I enjoy trying to think creatively and analytically. I hope to make a positive impact on the world through
-          software development.
-        </p>
+          <p class="p">
+            I enjoy trying to think creatively and analytically. I feel so lucky to have found development; there is no
+            satisfaction like finally reaching a solution to a tough problem. I hope to make a positive impact on the
+            world through software development.
+          </p>
 
-        <p class="p">
-          I have a wonderful dog named Apollo.
-        </p>
+          <p class="p">
+            I have a wonderful dog named Apollo.
+          </p>
 
-        <!-- <div class="mt-6 w-64 text-xs">
+          <!-- <div class="mt-6 w-64 text-xs">
           <div class="flex items-center cursor-pointer hover:opacity-50">
             <div class="h-3 w-3 mr-2"><img src="@/assets/gmailicon.png" /></div>
             <div>zackstout@gmail.com</div>
@@ -39,37 +41,40 @@
             <div>zackstout@gmail.com</div>
           </div>
         </div> -->
-      </div>
+        </div>
 
-      <div
-        class="cursor-pointer"
-        @click="updateBg"
-        style="width:800px; height:500px; background-size:contain; background-repeat:no-repeat; background-position:center;"
-        :style="{ backgroundImage: 'url(' + require('@/assets/' + bgImg + '.jpg') + ')' }"
-      ></div>
+        <div
+          @click="updateBg"
+          style="width:800px; height:500px; background-size:contain; background-repeat:no-repeat; background-position:top center;"
+          :style="{ backgroundImage: 'url(' + require('@/assets/' + bgImg + '.jpg') + ')' }"
+        ></div>
+      </div>
     </div>
 
-    <hr class="mt-16 mb-2" />
+    <div>
+      <!-- FOOTER: -->
+      <hr class="my-2" />
 
-    <div class="text-xs flex justify-around">
-      <!-- <div class="flex items-center">
+      <div class="text-xs flex justify-center space-x-8">
+        <!-- <div class="flex items-center">
         <div class="h-3 w-3 mr-2"><img src="@/assets/gmailicon.png" /></div>
         <div>zackstout@gmail.com</div>
       </div> -->
 
-      <div class="flex items-center my-1 cursor-pointer hover:opacity-50">
-        <div class="h-3 w-3 mr-2"><img src="@/assets/github_icon.svg" /></div>
+        <div class="flex items-center my-1 cursor-pointer hover:opacity-50">
+          <div class="h-3 w-3 mr-2"><img src="@/assets/github_icon.svg" /></div>
 
-        <a href="https://github.com/zackstout" target="_blank">/zackstout</a>
-        <!-- <div>/zackstout</div> -->
-      </div>
+          <a href="https://github.com/zackstout" target="_blank">/zackstout</a>
+          <!-- <div>/zackstout</div> -->
+        </div>
 
-      <div class="flex items-center cursor-pointer hover:opacity-50">
-        <div class="h-3 w-3 mr-2"><img src="@/assets/linkedin_icon.png" /></div>
-        <!-- <div>/zack-stout-01/</div> -->
-        <a href="https://linkedin.com/in/zack-stout-01" target="_blank">/zack-stout-01</a>
+        <div class="flex items-center cursor-pointer hover:opacity-50">
+          <div class="h-3 w-3 mr-2"><img src="@/assets/linkedin_icon.png" /></div>
+          <!-- <div>/zack-stout-01/</div> -->
+          <a href="https://linkedin.com/in/zack-stout-01" target="_blank">/zack-stout-01</a>
 
-        <!-- <div>LinkedIn</div> -->
+          <!-- <div>LinkedIn</div> -->
+        </div>
       </div>
     </div>
   </div>
@@ -83,7 +88,8 @@ export default class About extends Vue {
   bgImgNum = 1;
 
   get bgImg() {
-    return `face${this.bgImgNum}`;
+    // return `face${this.bgImgNum}`;
+    return "face";
   }
 
   updateBg() {

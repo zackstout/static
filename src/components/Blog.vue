@@ -33,7 +33,7 @@ export default class Blog extends Vue {
     const a1 = DateTime.fromJSDate(new Date(a.subtitle));
     const b1 = DateTime.fromJSDate(new Date(b.subtitle));
 
-    return b1 - a1;
+    return Number(b1) - Number(a1);
   });
 
   mounted() {
