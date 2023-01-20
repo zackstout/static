@@ -10,7 +10,8 @@
           </p>
 
           <p class="p">
-            My passions include math, puzzles, Greek tragedy and games.
+            My passions include math, puzzles, Greek tragedy and games. And most recently I have discovered that I love
+            to SCUBA dive! 🐟 🐠 ✨
           </p>
 
           <!-- <p class="p">I am trying to learn German — <span class="italic">ich versuche zu lernen!</span></p> -->
