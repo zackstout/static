@@ -1,9 +1,9 @@
 <template>
-  <div class="p-3 flex flex-col justify-between overflow-hidden" style="min-height: 95vh;">
+  <div class="p-3 flex lg:flex-col flex-wrap lg:flex-nowrap justify-between" style="min-height: 95vh;">
     <div>
       <div class="text-3xl mb-6">About</div>
 
-      <div class="w-full flex justify-between text-lg space-x-8">
+      <div class="w-full flex justify-between text-xl space-x-8">
         <div>
           <p class="p">
             I am a web developer living in Minneapolis, Minnesota.
@@ -46,7 +46,7 @@
 
         <div
           @click="updateBg"
-          style="width:800px; height:500px; background-size:contain; background-repeat:no-repeat; background-position:top center;"
+          style="width:1000px; height:500px; background-size:contain; background-repeat:no-repeat; background-position:top center;"
           :style="{ backgroundImage: 'url(' + require('@/assets/' + bgImg + '.jpg') + ')' }"
         ></div>
       </div>

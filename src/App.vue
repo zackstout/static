@@ -1,37 +1,38 @@
 <template>
-  <div id="app" class="relative w-full h-full">
-    <div id="sidebar" class="bg-gray-100">
-      <div
-        v-for="nav in sideNavs"
-        :key="nav.label"
-        :class="[$route.path.includes(nav.path) ? 'bg-blue-400 font-bold text-white' : 'hover:bg-blue-200 ']"
-        class="side-nav"
-        @click="$router.push({ name: nav.path }).catch(() => {})"
-      >
-        {{ nav.label }}
-      </div>
-
-      <div v-if="$route.path.includes('/blog')" class="mt-2">
+  <div>
+    <div id="app" class="relative w-full h-full" v-if="showSidebar">
+      <div id="sidebar" class="bg-gray-100">
         <div
-          v-for="post in posts"
-          :key="post.path"
-          class="mb-2 cursor-pointer px-3 py-2 flex items-center leading-none"
-          :class="[$route.path.includes(post.path.slice(1)) ? 'font-bold' : 'hover:opacity-50']"
-          @click="$router.push({ name: post.path.slice(1) }).catch(() => {})"
+          v-for="nav in sideNavs"
+          :key="nav.label"
+          :class="[$route.path.includes(nav.path) ? 'bg-blue-400 font-bold text-white' : 'hover:bg-blue-200 ']"
+          class="side-nav"
+          @click="$router.push({ name: nav.path }).catch(() => {})"
         >
-          <div class="h-2 w-2 mr-3 ml-3 flex-shrink-0 bg-blue-400"></div>
-          <div v-html="getTitle(post.title)"></div>
+          {{ nav.label }}
+        </div>
+
+        <div v-if="$route.path.includes('/blog')" class="mt-2">
+          <div
+            v-for="post in posts"
+            :key="post.path"
+            class="mb-2 cursor-pointer px-3 py-2 flex items-center leading-none"
+            :class="[$route.path.includes(post.path.slice(1)) ? 'font-bold' : 'hover:opacity-50']"
+            @click="$router.push({ name: post.path.slice(1) }).catch(() => {})"
+          >
+            <div class="h-2 w-2 mr-3 ml-3 flex-shrink-0 bg-blue-400"></div>
+            <div v-html="getTitle(post.title)"></div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div id="main" :class="[themeLight ? 'bg-white text-gray-800' : 'bg-blue-800 text-white']">
+      <div id="main" :class="[themeLight ? 'bg-white text-gray-800' : 'bg-blue-800 text-white']">
+        <router-view></router-view>
+      </div>
+    </div>
+    <div v-else>
       <router-view></router-view>
     </div>
-
-    <!-- <div class="absolute top-0 right-0">
-      <ToggleButton :selected="themeLight" @click="toggleTheme" />
-    </div> -->
   </div>
 </template>
 
@@ -110,6 +111,10 @@ export default class App extends Vue {
   toggleTheme() {
     this.themeLight = !this.themeLight;
     console.log("toggle", this.themeLight);
+  }
+
+  get showSidebar() {
+    return !this.$route.path.includes("jeopardy");
   }
 }
 </script>

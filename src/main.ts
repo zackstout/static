@@ -5,6 +5,8 @@ import VueRouter from "vue-router";
 import About from "@/components/About.vue";
 import Resume from "@/components/Resume.vue";
 import Projects from "@/components/Projects.vue";
+import Jeopardy from "@/components/Jeopardy/Jeopardy.vue"; // double jeopardy lol
+
 import Blog from "@/components/Blog.vue";
 import Post1 from "@/components/Posts/Post1.vue";
 import Post2 from "@/components/Posts/Post2.vue";
@@ -72,7 +74,12 @@ const router = new VueRouter({
     name: "projects",
     path: "/projects",
     component: Projects
-  }]
+  },
+  {
+    path: "/jeopardy",
+    component: Jeopardy
+  }
+  ]
 });
 
 
