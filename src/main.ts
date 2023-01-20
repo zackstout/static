@@ -76,6 +76,7 @@ const router = new VueRouter({
     component: Projects
   },
   {
+    name: "jeopardy",
     path: "/jeopardy",
     component: Jeopardy
   }
